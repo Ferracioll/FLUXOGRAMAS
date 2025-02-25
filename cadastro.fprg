@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-25 04:31:16 "/>
+        <attribute name="created" value="QWx1bm87IERTTjkxNC1NSUNSTzItTDsgMjAyNS0wMi0yNTsgMDM6NDI6MTUgOyAyNzA4"/>
+        <attribute name="edited" value="QWx1bm87IERTTjkxNC1NSUNSTzItTDsgMjAyNS0wMi0yNTsgMDQ6MzE6MTYgOyAyNzA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Email" type="String" array="False" size=""/>
+            <output expression="&quot;informe seu email&quot;"/>
+            <input variable="email"/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <output expression="&quot;informe seu nome&quot;"/>
+            <input variable="nome"/>
+            <declare name="senha" type="String" array="False" size=""/>
+            <output expression="&quot;informe sua senha em numeros&quot;"/>
+            <input variable="senha"/>
+            <if expression="len(senha) &lt; 8">
+                <then>
+                    <output expression="&quot;sua senha precisa ter mais que 8 caracteres&quot;"/>
+                    <breakpoint/>
+                </then>
+                <else>
+                    <output expression="&quot;ok&quot;"/>
+                </else>
+            </if>
+            <declare name="consenha" type="String" array="False" size=""/>
+            <output expression="&quot;confirme sua senha&quot;"/>
+            <input variable="consenha"/>
+            <if expression="senha == consenha">
+                <then>
+                    <output expression="&quot;tudo certo&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;invalido&quot;"/>
+                    <breakpoint/>
+                </else>
+            </if>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <output expression="&quot;informe sua idade&quot;"/>
+            <input variable="idade"/>
+            <if expression="idade &gt;=18">
+                <then>
+                    <output expression="&quot;Cadastro valido&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;cadastro invalido&quot;"/>
+                    <breakpoint/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
